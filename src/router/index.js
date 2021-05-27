@@ -1,10 +1,10 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
-import TestComponent from '../components/TestComponent'
-import FormComponent from '../components/FormComponent'
-import NotFoundComponent from '../components/NotFoundComponent'
+import TestPage from '../pages/TestPage'
+import FormPage from '../pages/FormPage'
+import NotFoundPage from '../pages/NotFoundPage'
 import store from '../store'
-import UserDetailsComponent from '../components/UserDetailsComponent'
+import UserDetailsPage from '../pages/UserDetailsPage'
 import CompanyDetailsComponent from '../components/CompanyDetailsComponent'
 
 Vue.use(VueRouter)
@@ -15,12 +15,12 @@ const router = new VueRouter({
     {
       name: 'home',
       path: '/',
-      component: TestComponent,
+      component: TestPage,
     },
     {
       name: 'form',
       path: '/form',
-      component: FormComponent,
+      component: FormPage,
       props: {
         title: 'My form'
       },
@@ -35,7 +35,7 @@ const router = new VueRouter({
     {
       name: 'user-details',
       path: '/user/:userId',
-      component: UserDetailsComponent,
+      component: UserDetailsPage,
       children: [
         {
           path: 'company',
@@ -54,7 +54,7 @@ const router = new VueRouter({
     {
       name: 'notfound',
       path: '*',
-      component: NotFoundComponent
+      component: NotFoundPage
     }
   ]
 })

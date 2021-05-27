@@ -9,7 +9,7 @@
 import { mapState } from 'vuex'
 
 export default {
-  name: 'FormComponent',
+  name: 'FormPage',
   created () {
     console.log(this.value)
   },

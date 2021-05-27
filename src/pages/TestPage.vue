@@ -9,7 +9,7 @@
 import { mapActions, mapGetters, mapState } from 'vuex'
 
 export default {
-  name: 'TestComponent',
+  name: 'TestPage',
   created () {
     console.log(this.user)
   },

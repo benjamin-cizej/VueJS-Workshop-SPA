@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'UserDetailsComponent',
+  name: 'UserDetailsPage',
   created () {
     console.log(this.$route.query)
   },
