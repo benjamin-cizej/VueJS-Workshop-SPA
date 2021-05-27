@@ -1,17 +1,14 @@
 <template>
   <div>
-    <TestComponent />
-    <FormComponent />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
-import TestComponent from './components/TestComponent'
-import FormComponent from './components/FormComponent'
 export default {
   name: 'App',
-  components: { FormComponent, TestComponent },
+  components: {},
   created () {
     console.log(this.$store.state.user)
   }

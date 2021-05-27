@@ -6,7 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.dist.js'
+    filename: 'index.dist.js',
+    publicPath: '/'
   },
   resolve: {
     extensions: ['.js', '.vue']
@@ -39,5 +40,10 @@ module.exports = {
       template: './src/index.html'
     }),
     new VueLoaderPlugin()
-  ]
+  ],
+  devServer: {
+    historyApiFallback: true,
+    contentBase: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
+  },
 }
