@@ -1,11 +1,12 @@
 import VueRouter from 'vue-router'
 import Vue from 'vue'
 import TestPage from '../pages/TestPage'
-import FormPage from '../pages/FormPage'
+const FormPage = () => import('../pages/FormPage')
 import NotFoundPage from '../pages/NotFoundPage'
 import store from '../store'
-import UserDetailsPage from '../pages/UserDetailsPage'
-import CompanyDetailsComponent from '../components/CompanyDetailsComponent'
+
+const UserDetailsPage = () => import(/* webpackChunkName: "group-users" */ '../pages/UserDetailsPage')
+const CompanyDetailsComponent = () => import(/* webpackChunkName: "group-users" */ '../components/CompanyDetailsComponent')
 
 Vue.use(VueRouter)
 
